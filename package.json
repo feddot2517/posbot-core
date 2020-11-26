@@ -1,0 +1,11 @@
+{
+  "name": "posbot-core",
+  "version": "0.1.0",
+  "description": "chat-bot core with integration bus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Posline",
+  "license": "MIT"
+}
