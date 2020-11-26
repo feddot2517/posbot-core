@@ -1,6 +1,6 @@
-import { CoreInterface } from './@types/CoreInterface';
-import { BotInterface } from './@types/BotInterface';
-import { Middleware } from './@types/BotTypes';
+import { CoreInterface } from './typings/CoreInterface';
+import { BotInterface } from './typings/BotInterface';
+import { Middleware } from './typings/BotTypes';
 
 export class Core implements CoreInterface {
     bots = Array<BotInterface>();

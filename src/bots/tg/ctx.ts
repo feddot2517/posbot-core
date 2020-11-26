@@ -1,7 +1,7 @@
 import { TelegrafContext } from 'telegraf/typings/context';
-import { CoreContextInterface } from '../../@types/CoreContextInterface';
+import { CoreContextInterface } from '../../typings/CoreContextInterface';
 import { Markup } from 'telegraf';
-import { UrlButtons } from '../../@types/MarkupInterface';
+import { UrlButtons } from '../../typings/MarkupInterface';
 
 export class TelegramCtx implements CoreContextInterface {
     private _ctx: TelegrafContext;

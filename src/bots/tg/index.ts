@@ -1,8 +1,8 @@
-import { BotInterface } from '../../@types/BotInterface';
-import { Markup, Telegraf, Telegram } from 'telegraf';
-import { Middleware } from '../../@types/BotTypes';
+import { BotInterface } from '../../typings/BotInterface';
+import { Markup, Telegraf } from 'telegraf';
+import { Middleware } from '../../typings/BotTypes';
 import { TelegramCtx } from './ctx';
-import { UrlButtons } from '../../@types/MarkupInterface';
+import { UrlButtons } from '../../typings/MarkupInterface';
 
 export class TelegramBot implements BotInterface {
     bot: Telegraf<any>;

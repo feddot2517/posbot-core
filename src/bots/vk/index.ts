@@ -1,9 +1,9 @@
 import { VkBot } from 'node-vk-bot-api';
 import { VkontakteCtx } from './ctx';
-import { BotInterface } from '../../@types/BotInterface';
-import { Middleware } from '../../@types/BotTypes';
+import { BotInterface } from '../../typings/BotInterface';
+import { Middleware } from '../../typings/BotTypes';
 import { VkontakteContext } from 'node-vk-bot-api/lib/typings/context';
-import { UrlButtons } from '../../@types/MarkupInterface';
+import { UrlButtons } from '../../typings/MarkupInterface';
 
 export class VkontakteBot implements BotInterface {
     bot: VkBot;

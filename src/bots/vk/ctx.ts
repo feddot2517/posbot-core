@@ -1,7 +1,7 @@
-import { CoreContextInterface } from '../../@types/CoreContextInterface';
+import { CoreContextInterface } from '../../typings/CoreContextInterface';
 import { VkontakteContext } from 'node-vk-bot-api/lib/typings/context';
-import { ReplyExtraInterface } from '../../@types/ReplyExtraInterface';
-import { UrlButtons, MarkupInterface } from '../../@types/MarkupInterface';
+import { ReplyExtraInterface } from '../../typings/ReplyExtraInterface';
+import { UrlButtons, MarkupInterface } from '../../typings/MarkupInterface';
 import { Markup, VkBotKeyboard } from 'node-vk-bot-api';
 
 export class VkontakteCtx implements CoreContextInterface {

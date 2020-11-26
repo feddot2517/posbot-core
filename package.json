@@ -1,11 +1,11 @@
 {
   "name": "posbot-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "chat-bot core with integration bus",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/@types/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && rm -rf ./dist/typings",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
