@@ -1,8 +1,8 @@
 import { BotInterface } from '../../@types/BotInterface';
-import {Markup, Telegraf, Telegram} from 'telegraf';
+import { Markup, Telegraf, Telegram } from 'telegraf';
 import { Middleware } from '../../@types/BotTypes';
 import { TelegramCtx } from './ctx';
-import {UrlButtons} from "../../@types/MarkupInterface";
+import { UrlButtons } from '../../@types/MarkupInterface';
 
 export class TelegramBot implements BotInterface {
     bot: Telegraf<any>;
@@ -31,7 +31,7 @@ export class TelegramBot implements BotInterface {
     }
 
     makeUrlButtons(markup: UrlButtons[][], inline: boolean, oneTime: boolean): Markup {
-        return Markup.inlineKeyboard(markup)
+        return Markup.inlineKeyboard(markup);
     }
 
     sendMessage(chatId: string, text: string, extra?: any) {

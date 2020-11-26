@@ -1,4 +1,4 @@
-import { MarkupInterface } from "./MarkupInterface";
+import { MarkupInterface } from './MarkupInterface';
 
 export interface ReplyExtraInterface {
     reply_markup: MarkupInterface;

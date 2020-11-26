@@ -41,9 +41,11 @@ export class Core implements CoreInterface {
 
         chatIds.forEach(chatId => {
             bot.sendMessage(chatId, text, extra).catch(e => {
-                console.error(`Sending message '${text}' failed to chat with id ${chatId}. Error log:\n`, e);
+                console.error(
+                    `Sending message '${text}' failed to chat with id ${chatId}. Error log:\n`,
+                    e,
+                );
             });
         });
     }
-
 }

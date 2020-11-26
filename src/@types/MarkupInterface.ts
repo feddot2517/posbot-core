@@ -1,9 +1,9 @@
 export interface MarkupInterface {
     buttons: UrlButtons[][];
-    options? :any
+    options?: any;
 }
 
 export interface UrlButtons {
-    text: string,
-    url: string,
+    text: string;
+    url: string;
 }

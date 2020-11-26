@@ -5,7 +5,12 @@ export interface CoreInterface {
     bots: Array<BotInterface>;
 
     init(): void;
-    broadcast(botAlias: string, chatIds: Array<string> | string, text: string, extra?: object): void;
+    broadcast(
+        botAlias: string,
+        chatIds: Array<string> | string,
+        text: string,
+        extra?: object,
+    ): void;
     getBotByAlias(alias: String): BotInterface;
     addMiddlewareEach(middleware: Middleware): void;
     onUserStartChat(middleware: Middleware): void;

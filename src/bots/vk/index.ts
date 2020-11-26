@@ -2,8 +2,8 @@ import { VkBot } from 'node-vk-bot-api';
 import { VkontakteCtx } from './ctx';
 import { BotInterface } from '../../@types/BotInterface';
 import { Middleware } from '../../@types/BotTypes';
-import { VkontakteContext } from "node-vk-bot-api/lib/typings/context";
-import {UrlButtons} from "../../@types/MarkupInterface";
+import { VkontakteContext } from 'node-vk-bot-api/lib/typings/context';
+import { UrlButtons } from '../../@types/MarkupInterface';
 
 export class VkontakteBot implements BotInterface {
     bot: VkBot;
@@ -15,7 +15,9 @@ export class VkontakteBot implements BotInterface {
         this.alias = alias;
     }
     addMiddleware(middleware: Middleware) {
-        this.bot.use((ctx: VkontakteContext, next: Function) => middleware(new VkontakteCtx(ctx, this.alias), next));
+        this.bot.use((ctx: VkontakteContext, next: Function) =>
+            middleware(new VkontakteCtx(ctx, this.alias), next),
+        );
     }
 
     init() {
@@ -39,24 +41,21 @@ export class VkontakteBot implements BotInterface {
         return this.bot.sendMessage(chatId, text, extra);
     }
 
-    makeUrlButtons(markup: UrlButtons[][], inline: boolean, oneTime: boolean,): any {
+    makeUrlButtons(markup: UrlButtons[][], inline: boolean, oneTime: boolean): any {
         return {
             keyboard: {
-                buttons: markup.map((r) => (
-                    r.map((c) => (
-                            {
-                                action: {
-                                    type: 'open_link',
-                                    link: c.url,
-                                    label: c.text
-                                }
-                            }
-                        )
-                    ))
+                buttons: markup.map(r =>
+                    r.map(c => ({
+                        action: {
+                            type: 'open_link',
+                            link: c.url,
+                            label: c.text,
+                        },
+                    })),
                 ),
                 one_time: oneTime,
                 inline: inline,
-            }
-        }
+            },
+        };
     }
 }
