@@ -7,6 +7,8 @@ based on telegraf.js and node-vk-bot-api chat-bot core
 | reply(msg, extra)     |
 | makeUrlButtons(markup)|
 
+for more see src 
+
 
 ## examples
 ### core startup example
