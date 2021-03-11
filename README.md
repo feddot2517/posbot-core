@@ -2,6 +2,12 @@
 based on telegraf.js and node-vk-bot-api chat-bot core
 
 
+| ctx methods           |
+| -------------         | 
+| reply(msg, extra)     |
+| makeUrlButtons(markup)|
+
+
 ## examples
 ### core startup example
 ```javascript
